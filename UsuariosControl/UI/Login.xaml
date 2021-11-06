@@ -22,11 +22,13 @@
                     <Button x:Name="IngresarButton" Click="IngresarButton_Click" Margin="10">
                         <StackPanel Orientation="Horizontal">
                             <Label Content="Ingresar"/>
+                            <Image Source="/Resources/usuario.png" Width="30"/>
                         </StackPanel>
                     </Button>
                     <Button x:Name="CancelarButton" Click="CancelarButton_Click" Margin="10">
                         <StackPanel Orientation="Horizontal">
                             <Label Content="Cancelar"/>
+                            <Image Source="/Resources/icons8-eliminar-16.png" Width="30"/>
                         </StackPanel>
                     </Button>
                 </StackPanel>
