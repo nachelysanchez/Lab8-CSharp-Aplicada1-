@@ -109,29 +109,5 @@ namespace UsuariosControl.Properties {
                 return ((byte[])(obj));
             }
         }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to using System;
-        ///using System.Collections.Generic;
-        ///using System.Linq;
-        ///using System.Text;
-        ///using System.Threading.Tasks;
-        ///using System.Windows;
-        ///using System.Windows.Controls;
-        ///
-        ///namespace UsuariosControl.Resources.PasswordHelper
-        ///{
-        ///    public class PasswordHelper
-        ///    {
-        ///        public static readonly DependencyProperty PasswordProperty =
-        ///            DependencyProperty.RegisterAttached(&quot;Password&quot;, typeof(string),
-        ///                typeof(PasswordHelper),
-        ///                new FrameworkPropertyMetadata(strin [rest of string was truncated]&quot;;.
-        /// </summary>
-        internal static string PasswordHelper {
-            get {
-                return ResourceManager.GetString("PasswordHelper", resourceCulture);
-            }
-        }
     }
 }

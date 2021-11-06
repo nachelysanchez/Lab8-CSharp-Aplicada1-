@@ -38,12 +38,6 @@
 
   <ItemGroup>
     <Folder Include="DATA\" />
-    <Folder Include="UI\Consultas\" />
-    <Folder Include="UI\Registros\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="Resources\PasswordHelper\PasswordHelper.cs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -60,9 +54,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Update="Resources\PasswordHelper\PasswordHelper.cs">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Compile>
   </ItemGroup>
 
   <ItemGroup>
@@ -74,7 +65,7 @@
 
   <ItemGroup>
     <None Update="DATA\UsersControl.db">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
 

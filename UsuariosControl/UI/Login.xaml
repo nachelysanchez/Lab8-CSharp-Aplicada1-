@@ -4,8 +4,9 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:UsuariosControl.UI"
-        xmlns:PasswordHelper="clr-namespace:TeacherControlWPF.Resources.PasswordHelper"
+        xmlns:PasswordHelper="clr-namespace:UsuariosControl.PasswordHelper"
         mc:Ignorable="d"
+        Icon="/Resources/Icono.ico"
         Title="Login" Height="200" Width="400"
         WindowStartupLocation="CenterScreen">
     <Grid>
@@ -15,14 +16,19 @@
                 <TextBox x:Name="NombreUsuarioTextBox" Text="{Binding NombreUsuario}"/>
 
                 <Label Content="Contraseña"/>
-                <PasswordBox x:Name="ContrasenaPasswordBox" />
+                <PasswordBox x:Name="ContrasenaPasswordBox" PasswordHelper:PasswordHelper.Attach="True" 
+                             PasswordHelper:PasswordHelper.Password="{Binding Contrasena, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
                 <StackPanel Orientation="Horizontal" Margin="10" HorizontalAlignment="Center">
-                    <Button x:Name="IngresarButton" Click="IngresarButton_Click">
+                    <Button x:Name="IngresarButton" Click="IngresarButton_Click" Margin="10">
                         <StackPanel Orientation="Horizontal">
                             <Label Content="Ingresar"/>
                         </StackPanel>
                     </Button>
-                    
+                    <Button x:Name="CancelarButton" Click="CancelarButton_Click" Margin="10">
+                        <StackPanel Orientation="Horizontal">
+                            <Label Content="Cancelar"/>
+                        </StackPanel>
+                    </Button>
                 </StackPanel>
             </StackPanel>
         </StackPanel>

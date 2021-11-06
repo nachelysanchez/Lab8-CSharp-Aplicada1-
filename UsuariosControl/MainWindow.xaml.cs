@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using UsuariosControl.UI.Consultas;
+using UsuariosControl.UI.Registros;
 
 namespace UsuariosControl
 {
@@ -23,6 +25,18 @@ namespace UsuariosControl
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void UsuariosMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            rUsuarios registro = new rUsuarios();
+            registro.Show();
+        }
+
+        private void ConsultaUsuarioMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            cUsuarios consulta = new cUsuarios();
+            consulta.Show();
         }
     }
 }

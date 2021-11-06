@@ -155,6 +155,26 @@ namespace UsuariosControl.BLL
             }
             return Lista;
         }
+        public static List<Usuarios> GetUsuarios()
+        {
+            Contexto contexto = new Contexto();
+            List<Usuarios> Lista = new List<Usuarios>();
+
+            try
+            {
+                Lista = contexto.Usuarios.ToList();
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                contexto.Dispose();
+            }
+            return Lista;
+        }
         public static bool Validar(string nombre, string contrasena)
         {
             bool paso = false;

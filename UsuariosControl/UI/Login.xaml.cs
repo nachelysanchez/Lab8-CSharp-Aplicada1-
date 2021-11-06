@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using UsuariosControl.BLL;
+using UsuariosControl.Entidades;
 
 namespace UsuariosControl.UI
 {
@@ -19,6 +21,9 @@ namespace UsuariosControl.UI
     /// </summary>
     public partial class Login : Window
     {
+        Usuarios usuarios = new Usuarios();
+        MainWindow Principal = new MainWindow();
+
         public Login()
         {
             InitializeComponent();
@@ -26,7 +31,24 @@ namespace UsuariosControl.UI
 
         private void IngresarButton_Click(object sender, RoutedEventArgs e)
         {
+            bool paso = LoginBLL.Validar(NombreUsuarioTextBox.Text, ContrasenaPasswordBox.Password);
 
+            if (paso)
+            {
+                this.Close();
+                Principal.Show();
+            }
+            else
+            {
+                MessageBox.Show("Nombre Usuario o Contraseña incorrecta!", "Error!");
+                ContrasenaPasswordBox.Clear();
+                NombreUsuarioTextBox.Focus();
+            }
+        }
+
+        private void CancelarButton_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
         }
     }
 }
